@@ -1,0 +1,21 @@
+<%= form_for @user do |f| %>
+
+<p>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <%= @user.errors[:first_name] unless @user.errors[:first_name].empty? %>
+</p>
+
+
+<p>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <%= @user.errors[:last_name] unless @user.errors[:last_name].empty?  %>
+  
+</p>
+
+<p>
+  <%= f.submit "Save" %>
+</p>
+
+<% end %>
